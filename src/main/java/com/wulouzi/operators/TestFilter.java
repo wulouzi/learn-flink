@@ -8,7 +8,7 @@ import javax.xml.crypto.Data;
 
 public class TestFilter {
     public static void main(String[] args) throws Exception {
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         DataStream<Long> input = env.generateSequence(0,10);
 

@@ -100,7 +100,7 @@ public class TestIntervalJoin {
 
     public static void main(String[] args) throws Exception {
 
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         //设置时间类型为EventTime
 

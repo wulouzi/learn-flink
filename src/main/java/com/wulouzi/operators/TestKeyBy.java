@@ -19,7 +19,7 @@ public class TestKeyBy {
     };
 
     public static void main(String[] args) throws Exception {
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         DataStream<String> input = env.fromElements(WORDS);
 

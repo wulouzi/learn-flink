@@ -16,7 +16,7 @@ public class TestProject {
     };
 
     public static void main(String[] args) throws Exception {
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         DataStream<Tuple4<String, Integer, Long, Long>> input = env.fromElements(ORDERS);
 

@@ -14,7 +14,7 @@ public class TestConnect {
     };
 
     public static void main(String[] args) throws Exception {
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         DataStream<Long> inputLong = env.generateSequence(0, 100);
 

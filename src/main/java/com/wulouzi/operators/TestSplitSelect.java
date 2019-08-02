@@ -10,7 +10,7 @@ import java.util.List;
 
 public class TestSplitSelect {
     public static void main(String[] args) throws Exception {
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         DataStream<Long> input = env.generateSequence(0, 10);
 
         SplitStream<Long> splitStream = input.split(new OutputSelector<Long>() {
