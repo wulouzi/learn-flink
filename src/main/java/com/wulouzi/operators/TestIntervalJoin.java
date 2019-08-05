@@ -103,7 +103,7 @@ public class TestIntervalJoin {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         //设置时间类型为EventTime
-
+        env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
 
         //datasource1, 分配时间
         DataStream<Order> inputOrder = env.fromElements(ORDERS).assignTimestampsAndWatermarks(new AscendingTimestampExtractor<Order>() {
